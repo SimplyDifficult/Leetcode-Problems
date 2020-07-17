@@ -1,0 +1,36 @@
+class Solution {
+public:
+    
+    int cross_sum(vector<int>&nums,int left,int right,int mid){
+        if(left==right)return nums[left];
+        
+        int leftsum=INT_MIN;
+        int curr=0;
+        for(int i=mid;i>=left;i--){
+            curr+=nums[i];
+            leftsum=max(leftsum,curr);
+        }
+        int rightsum=INT_MIN;
+        curr=0;
+        for(int i=mid+1;i<=right;i++){
+            curr+=nums[i];
+            rightsum=max(rightsum,curr);
+        }
+        return leftsum+rightsum;
+    }
+    
+    int helper(vector<int>&nums, int left, int right){
+        if(left==right)return nums[left];
+        int mid=(left+right)/2;
+        
+        int leftsub=helper(nums,left,mid);
+        int rightsub=helper(nums,mid+1,right);
+        int cross=cross_sum(nums,left,right,mid);
+        return max(max(leftsub,rightsub),cross);
+    }
+        
+        
+    int maxSubArray(vector<int>& nums) {
+        return helper(nums,0,nums.size()-1);
+    }
+};
