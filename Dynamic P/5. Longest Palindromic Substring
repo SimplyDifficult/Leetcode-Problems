@@ -3,7 +3,7 @@ public:
     
     int start,maxlen;
     
-    void expend(string s, int i,int j){
+    void expand(string s, int i,int j){
         while(i>=0 && j<s.size() && s[i]==s[j]){
             i--;
             j++;
@@ -17,8 +17,8 @@ public:
     string longestPalindrome(string s) {
         if(s.size()<=1)return s;
         for(int i=0;i<s.size();i++){
-            expend(s,i,i);
-            expend(s,i,i+1);
+            expand(s,i,i);
+            expand(s,i,i+1);
         }
         return s.substr(start,maxlen);
     }
