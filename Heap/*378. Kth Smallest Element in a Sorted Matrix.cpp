@@ -1,7 +1,7 @@
 class Solution {
 public:
     struct compare{
-        bool operator()(const pair<int,pair<int,int>>a, const pair<int,pair<int,int>>b){
+        bool operator()(pair<int,pair<int,int>>a,pair<int,pair<int,int>>b){
             return a.first>b.first;
         }
     };
