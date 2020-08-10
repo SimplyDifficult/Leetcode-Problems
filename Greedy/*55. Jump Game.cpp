@@ -2,13 +2,11 @@ class Solution {
 public:
     bool canJump(vector<int>& nums) {
         int n=nums.size();
-        vector<int>dp(n);
-        int lastpos=n-1;
-        for(int i=n-1;i>=0;i--){
-            if(i+nums[i]>=lastpos)
-                lastpos=i;
+        int maxpos=nums[0];
+        for(int i=1;i<n;i++){
+            if(maxpos<i)return false;
+            maxpos=max(maxpos,i+nums[i]);
         }
-        return lastpos==0;
+        return true;
     }
 };
-
