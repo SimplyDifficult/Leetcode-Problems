@@ -23,3 +23,4 @@ The idea of inheritance is simple, a class is based on another class and uses da
 The purpose of inheritance is Code Reuse. 
 
 What is Abstraction?
+We try to obtain our own abstract view, or model, of the problem. This process of modeling is called abstraction.
