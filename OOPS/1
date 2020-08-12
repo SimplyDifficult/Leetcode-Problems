@@ -1,26 +1,51 @@
 Object Oriented Programming (OOP) is a programming paradigm where the complete software operates as a bunch of objects talking to each other.
 An object is a collection of data and methods that operate on its data.
+The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function.
+
 
 Why OOP?
 1) The overall understanding of the software is increased as the distance between the language spoken by developers and that spoken by users.
 2) Object orientation eases maintenance by the use of encapsulation.   One can easily change the underlying representation by keeping the methods same.
+
 
 What are main features of OOP?
 Encapsulation
 Polymorphism
 Inheritance
 
+
 What is encapsulation?
+(in a company, there are different sections like the accounts section, finance section).
 Encapsulation is referred to one of the following two notions.
 1) Data hiding: A language feature to restrict access to members of an object. For example, private and protected members in C++.
 2) Bundling of data and methods together: Data and methods that operate on that data are bundled together.
+Encapsulation is defined as binding together the data and the functions that manipulate them. 
+
 
 Polymorphism means that some code or operations or objects behave differently in different contexts
-Compile Time Polymorphism
+Operator Overloading:
+Function Overloading:
+Compile Time Polymorphism:
 Run Time Polymorphism:
+Polymorphism is extensively used in implementing inheritance.
+
 
 The idea of inheritance is simple, a class is based on another class and uses data and implementation of the other class.
 The purpose of inheritance is Code Reuse. 
+Sub Class: The class that inherits properties from another.
+Super Class:The class whose properties are inherited by sub class.
+
 
 What is Abstraction?
-We try to obtain our own abstract view, or model, of the problem. This process of modeling is called abstraction.
+(The man only knows that pressing the accelerators will increase the speed, he does not know about the inner mechanism).
+Data abstraction refers to providing only essential information about the data to the outside world, hiding the background details or implementation.
+Abstraction using Classes:  The class helps us to group data members and member functions.
+Abstraction in Header files: 
+
+
+Class:  Holds its own data members and member functions, which can be accessed and used by creating an instance of that class. 
+        A class is like a blueprint for an object. 
+        Data members are the data variables and member functions are the functions used to manipulate these variables.
+        
+Object: An Object is an instance of a Class. When a class is defined, no memory is allocated but when it is instantiated 
+        (i.e. an object is created) memory is allocated. 
