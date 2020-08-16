@@ -22,7 +22,12 @@ void Graph::DFS(int v)
     for (int i = 0; i < V; i++) 
         visited[i] = false; 
   
-    // Call the recursive helper function 
-    // to print DFS traversal 
-    DFSUtil(v, visited); 
+    // Call the recursive helper function to print DFS traversal 
+    // starting from all vertices one by one 
+    for (int i = 0; i < V; i++) 
+        if (visited[i] == false) 
+            DFSUtil(i, visited); 
 } 
+
+Time complexity: O(V + E),
+Space Complexity: O(V)
