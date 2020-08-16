@@ -37,3 +37,5 @@ void Graph::BFS(int s)
         } 
     } 
 } 
+
+Time Complexity: O(V+E)
